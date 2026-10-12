@@ -6,20 +6,34 @@ on:
     - cron: "*/10 * * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+
+      - name: Python installieren
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - run: pip install aiohttp
+      - name: Abhängigkeiten installieren
+        run: pip install aiohttp
 
       - name: Monitor starten
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python pokemon_monitor.py
 
+      - name: Prüfstatus speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitor_state.json
+          git diff --cached --quiet || git commit -m "Update monitor state"
+          git push
