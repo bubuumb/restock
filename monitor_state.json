@@ -1,17 +1,17 @@
 {
   "Müller|Korntal|https://www.mueller.de/b/pokemon/": {
     "status": "possibly_unavailable",
-    "fingerprint": "a9d1f8a64c24986764960145258860adb2f42d0dcad8af99b78ae4fa9b023b68",
-    "checked_at": "2026-10-31T22:32:04.392493+00:00"
+    "fingerprint": "7c7349412681368323f9a48c918cf754bc0be4f14345ac93330548188d194271",
+    "checked_at": "2026-11-01T01:25:50.567760+00:00"
   },
   "Müller|Ditzingen|https://www.mueller.de/b/pokemon/": {
     "status": "possibly_unavailable",
-    "fingerprint": "ddfa321886cd3d11ba08256d2b1f80f90fc4e2f89744d6fa7b303355995cb42f",
-    "checked_at": "2026-10-31T22:32:04.867485+00:00"
+    "fingerprint": "f42269f6802cc063bf9976c552e3c71efc91fa2299c9c01cef9b954bf0c3bfb1",
+    "checked_at": "2026-11-01T01:25:51.009959+00:00"
   },
   "Rossmann|Gerlingen|https://www.rossmann.de/": {
     "status": "unknown",
     "fingerprint": "1f581a10fbc3ecc70bf6df231eef36d2f1071d5c8b40a1e13123cf551417eac7",
-    "checked_at": "2026-10-31T22:32:06.119389+00:00"
+    "checked_at": "2026-11-01T01:25:52.289139+00:00"
   }
 }
